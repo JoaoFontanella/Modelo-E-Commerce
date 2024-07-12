@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #ece9e6, #ffffff);
+  color: #333;
+}
+
+.checkout-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 170px;
+}
+
+.products-section,
+.payment-section {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 45%;
+  max-width: 600px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.products-section:hover,
+.payment-section:hover {
+  transform: scale(1.05);
+}
+
+.products-section {
+  margin-right: 30px;
+}
+
+.payment-section {
+  width: 400px;
+  margin-left: 30px;
+}
+
+.products-section h2,
+.payment-section h2 {
+  text-align: center;
+  color: #007bff;
+  font-family: 'Helvetica', sans-serif;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.products-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.products-section li {
+  margin-bottom: 15px;
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.products-section li:hover {
+  background: #e9e9e9;
+}
+
+.payment-section form {
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  background: #f9f9f9;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.payment-section label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.payment-section input[type='text'] {
+  width: calc(100% - 10px);
+  padding: 4.5px;
+  border-radius: 4px;
+  border: 1px solid #007bff;
+}
+
+.payment-section input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+input#paypal {
+  margin-top: 5px;
+  margin-bottom: 50px;
+}
+
+input#card:hover,
+input#paypal {
+  cursor: pointer;
+}
+
+.payment-section button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #007bff;
+}
+
+.payment-section button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .checkout-container {
+    flex-direction: column;
+  }
+
+  .products-section,
+  .payment-section {
+    width: 80%;
+    max-width: none;
+    margin: 10px 0;
+  }
+
+  .payment-section {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-section,
+  .payment-section {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .payment-section input[type='text'] {
+    width: calc(100% - 10px);
+  }
+}

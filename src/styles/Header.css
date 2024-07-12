@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 5px 20px;
+  background-color: #f8f8f8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.logo {
+  flex: 0 0 auto;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.search-bar {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  margin-right: 20px;
+}
+
+.search-bar input {
+  padding: 8px 12px;
+  padding-right: 40px;
+  border: 1px solid #007bff;
+  border-radius: 7px;
+  font-size: 16px;
+  width: 100%;
+  max-width: 300px;
+  background-color: #f8f8f8;
+}
+
+.search-bar input:focus {
+  outline: none;
+  border-color: #004288;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #004288;
+  pointer-events: none;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+}
+
+button {
+  padding: 8px 12px;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  font-size: 16px;
+  max-width: 80px;
+  color: #004288;
+  background-color: #f8f8f8;
+}
+
+button:hover {
+  border-color: #004288;
+  cursor: pointer;
+}
+
+button#cart,
+button#login {
+  padding: 8px 20px;
+  font-size: 16px;
+  margin: 0 10px 0 0;
+}
+
+.icon {
+  font-size: 28px;
+  margin-right: 8px;
+}
+
+main {
+  padding-top: 120px;
+}
